@@ -5,8 +5,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params).save
-    redirect_to '/welcome'
+    if @user = User.new(user_params).save
+      redirect_to '/welcome'
+    else 
+      redirect_to '/signup'
+    end 
   end
 
   def welcome
