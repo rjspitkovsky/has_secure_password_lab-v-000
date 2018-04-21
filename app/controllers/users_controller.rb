@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
   def create
      @user = User.new(user_params).save
-     if !@user.nil?
       current_user = @user.id
       redirect_to '/welcome'
     else
