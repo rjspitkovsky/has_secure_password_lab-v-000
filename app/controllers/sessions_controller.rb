@@ -9,11 +9,12 @@ class SessionsController < ApplicationController
       return head(:forbidden) unless @user.authenticate(params[:password])
       session[:user_id] = @user.id
       redirect_to '/welcome'
-      binding.pry 
+
     else
       redirect_to '/login'
     end
   end
+  binding.pry 
 
   def destroy
     session.delete :username
