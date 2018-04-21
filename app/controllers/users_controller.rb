@@ -5,7 +5,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    if @user = User.new(user_params).save
+     @user = User.new(user_params).save
+     if @user 
       current_user = @user.id
       redirect_to '/welcome'
     else
