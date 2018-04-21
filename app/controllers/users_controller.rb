@@ -10,7 +10,7 @@ class UsersController < ApplicationController
       redirect_to '/welcome'
     else
       redirect_to '/signup'
-    end 
+    end
   end
 
   def welcome
