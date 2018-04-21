@@ -1,4 +1,4 @@
-require 'pry'
+
 class SessionsController < ApplicationController
 
   def new
@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       redirect_to '/login'
     end
   end
-  binding.pry 
+
 
   def destroy
     session.delete :username
