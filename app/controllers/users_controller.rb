@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   end
 
   def welcome
+    @user = current_user
   end
 
   private
