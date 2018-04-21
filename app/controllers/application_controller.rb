@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
 
   def index
     redirect_to '/signup'
-  end 
+  end
 
   def current_user
-    session[:username]
+    session[:user_id]
   end
 end
