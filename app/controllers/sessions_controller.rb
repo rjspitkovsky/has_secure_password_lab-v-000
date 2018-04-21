@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
       redirect_to '/welcome'
     else
       redirect_to '/login'
-  end
+    end
+  end 
 
   def destroy
     session.delete :username
