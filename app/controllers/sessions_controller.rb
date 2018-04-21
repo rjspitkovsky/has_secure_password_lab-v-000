@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
       if @user = User.find_by(name: params[:name])
       return head(:forbidden) unless @user.authenticate(params[:password])
-      session[:user_id] = @user.user_id
+      session[:user_id] = @user.id
       redirect_to '/welcome'
     else
       redirect_to '/login'
